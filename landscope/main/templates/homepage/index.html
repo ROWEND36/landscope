@@ -2,7 +2,8 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+    
     <title>LandScope</title>
     {% load static %}
     <script src="{% static '/libs/js/babel.min.js' %}" type="text/javascript" charset="utf-8"></script>
@@ -10,8 +11,9 @@
     <script src="{% static '/libs/js/react-dom.development.js' %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static '/libs/js/eruda.min.js' %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static '/libs/js/material-ui.development.js' %}" type="text/javascript" charset="utf-8"></script>
+    
     <link rel="stylesheet" href="{% static '/libs/css/icon.css' %}">
-    <link rel="stylesheet" href="{% static '/main.css' %}" >
+    <link rel="stylesheet" href="{% static '/homepage/main.css' %}" >
 </head>
 <body>
     <div id="root">
@@ -21,9 +23,8 @@
         eruda.init([]);
     </script>
     {% for script in scripts %}
-        <script src="{% static '/dist/' %}{{ script }}" type="text/babel"></script>
+        <script src="{% static '/homepage/' %}{{ script }}" type="text/babel"></script>
     {% endfor %}
-    </script>
 </body>
 
 </html>
